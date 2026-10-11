@@ -6,7 +6,7 @@ Many controller testers show a polling-rate number. AleksControllerTester timest
 
 > **Honest by design.** AleksControllerTester reports **Windows host input-delivery timing — not** the controller's internal scan rate or its USB polling, **not** button-to-screen latency, **not** a verdict on your hardware. Latency numbers are clearly labelled lower bounds or relative differences between Windows input paths. Results describe one controller, on one PC, under one load. When a measurement isn't trustworthy, the tool says so ("—", "Not enough data") instead of glowing green.
 
-**Version 1.0.1 — tested on hardware with one controller so far.** Please read [Tested hardware](#tested-hardware) and [Known limitations](#known-limitations) before you trust a result from another controller or connection. Results from other controllers are very welcome.
+**Version 1.0.2 — tested on hardware with one controller so far.** Please read [Tested hardware](#tested-hardware) and [Known limitations](#known-limitations) before you trust a result from another controller or connection. Results from other controllers are very welcome.
 
 **Free, and it stays free.** If it helps you, you can [support it](#support) with a voluntary donation — nothing is unlocked by it.
 
@@ -98,7 +98,7 @@ Short version: it's a small, offline, listen-only tool — and you don't have to
 
 ## Status
 
-1.0.1 is a small update of 1.0.0, the first public release — it adds the **♥ Support** button. The measurement pipeline and every feature above are complete and covered by automated tests, but hardware verification is **one controller** so far (see [Known limitations](#known-limitations)), and every input-quality threshold is provisional until results from many controllers exist.
+1.0.2 is a small update of 1.0.0, the first public release: 1.0.1 added the **♥ Support** button, 1.0.2 makes the toolbar fit small screens and high display scaling and gives the graph on Advanced / Lab more room. The measurement pipeline and every feature above are complete and covered by automated tests, but hardware verification is **one controller** so far (see [Known limitations](#known-limitations)), and every input-quality threshold is provisional until results from many controllers exist.
 
 ## Feedback
 
