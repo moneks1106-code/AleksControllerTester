@@ -6,7 +6,9 @@ Many controller testers show a polling-rate number. AleksControllerTester timest
 
 > **Honest by design.** AleksControllerTester reports **Windows host input-delivery timing — not** the controller's internal scan rate or its USB polling, **not** button-to-screen latency, **not** a verdict on your hardware. Latency numbers are clearly labelled lower bounds or relative differences between Windows input paths. Results describe one controller, on one PC, under one load. When a measurement isn't trustworthy, the tool says so ("—", "Not enough data") instead of glowing green.
 
-**Version 1.0.0 — tested on hardware with one controller so far.** Please read [Tested hardware](#tested-hardware) and [Known limitations](#known-limitations) before you trust a result from another controller or connection. Results from other controllers are very welcome.
+**Version 1.0.1 — tested on hardware with one controller so far.** Please read [Tested hardware](#tested-hardware) and [Known limitations](#known-limitations) before you trust a result from another controller or connection. Results from other controllers are very welcome.
+
+**Free, and it stays free.** If it helps you, you can [support it](#support) with a voluntary donation — nothing is unlocked by it.
 
 ## What it does
 
@@ -76,7 +78,7 @@ Short version: it's a small, offline, listen-only tool — and you don't have to
 
 - **Why the SmartScreen warning?** AleksControllerTester is a free tool I don't earn anything from, and it is **not code-signed — by decision, for now**. Unsigned doesn't mean unsafe — it only means Windows has no verified publisher to attach a reputation to. SmartScreen tracks reputation per file for unsigned programs, so **every new release starts again at zero reputation**.
 - **Smart App Control (Windows 11).** In its *On* (enforcing) mode, Windows blocks an unsigned program without established reputation outright — there is no "Run anyway". I do **not** recommend turning Smart App Control off for this tool.
-- **No network, no telemetry.** It reads your controller's input **locally** — **nothing leaves your PC**, no internet calls, no tracking. Test history is stored only in `Documents\AleksControllerTester`, plus a small **local** error log (`%LocalAppData%\AleksControllerTester\logs`) so crashes can be diagnosed.
+- **No network, no telemetry.** It reads your controller's input **locally** — **nothing leaves your PC**, no internet calls, no tracking. Test history is stored only in `Documents\AleksControllerTester`, plus a small **local** error log (`%LocalAppData%\AleksControllerTester\logs`) so crashes can be diagnosed. The **♥ Support** button changes nothing about that: only your web browser opens its PayPal link, and only when you click **Open PayPal** (see [Support](#support)).
 - **Listen-only.** It never sends anything to your controller (no rumble, no settings, no firmware), installs no drivers, and never changes Windows settings. Games and other apps keep receiving your input as usual.
 - **Runs next to AleksMouseTester.** The two tools keep completely separate settings, history and logs and can run at the same time — for a measurement, leave the other one idle.
 
@@ -96,7 +98,7 @@ Short version: it's a small, offline, listen-only tool — and you don't have to
 
 ## Status
 
-1.0.0 is the first public release: the measurement pipeline and every feature above are complete and covered by automated tests, but hardware verification is **one controller** so far (see [Known limitations](#known-limitations)), and every input-quality threshold is provisional until results from many controllers exist.
+1.0.1 is a small update of 1.0.0, the first public release — it adds the **♥ Support** button. The measurement pipeline and every feature above are complete and covered by automated tests, but hardware verification is **one controller** so far (see [Known limitations](#known-limitations)), and every input-quality threshold is provisional until results from many controllers exist.
 
 ## Feedback
 
@@ -105,6 +107,18 @@ Found a bug, or measured a controller that isn't listed above? Please open an is
 - the controller model, the connection (USB cable / receiver / Bluetooth) and its mode (XInput / D-input / Switch / PlayStation),
 - your **Stick Motion** result (score and report rate),
 - the exported Markdown report (**Export report**) of that run — it lists the controller, the results and some PC context (no user or computer name, an anonymized device id); have a quick look before you post it.
+
+## Support
+
+AleksControllerTester is free, and it stays free. I build it alone, in my spare time. If it helped you, a **voluntary** donation helps keep it going and pays for testing with more controllers:
+
+**[paypal.me/AKrstic43](https://paypal.me/AKrstic43)**
+
+- **Nothing is unlocked by donating** — every feature stays free for everyone.
+- In the app, the **♥ Support** button at the right end of the toolbar opens a small window with the same link: **Open PayPal** opens it in your web browser (the tester itself sends nothing), **Copy link** copies it. It never pops up by itself.
+- On GitHub, the **Sponsor** button at the top of this repository leads to the same link.
+
+Thank you either way — a bug report or a result from a controller that isn't listed above helps just as much.
 
 ## License
 
