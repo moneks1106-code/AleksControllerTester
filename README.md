@@ -6,13 +6,13 @@ Many controller testers show a polling-rate number. AleksControllerTester timest
 
 > **Honest by design.** AleksControllerTester reports **Windows host input-delivery timing — not** the controller's internal scan rate or its USB polling, **not** button-to-screen latency, **not** a verdict on your hardware. Latency numbers are clearly labelled lower bounds or relative differences between Windows input paths. Results describe one controller, on one PC, under one load. When a measurement isn't trustworthy, the tool says so ("—", "Not enough data") instead of glowing green.
 
-**Version 1.0.2 — tested on hardware with one controller so far.** Please read [Tested hardware](#tested-hardware) and [Known limitations](#known-limitations) before you trust a result from another controller or connection. Results from other controllers are very welcome.
+**Version 1.0.3 — tested on hardware with one controller so far.** Please read [Tested hardware](#tested-hardware) and [Known limitations](#known-limitations) before you trust a result from another controller or connection. Results from other controllers are very welcome.
 
 **Free, and it stays free.** If it helps you, you can [support it](#support) with a voluntary donation — nothing is unlocked by it.
 
 ## What it does
 
-- **Controller** — the page the app opens on: a live view of your controller with every button, both sticks with trails and a live circularity outline, both triggers, the four back-paddle positions, and how many reports per second Windows delivers right now. **Scan (press a button)** picks the controller you touch; with only one controller connected, it is selected for you. Button labels: Auto / Xbox / PlayStation / Nintendo / Generic. The live view pauses while a test runs, so it never disturbs a measurement.
+- **Controller** — the page the app opens on: a live view of your controller with every button, both sticks with trails and a live circularity outline, both triggers, the four back-paddle positions, and how many reports per second Windows delivers right now. **Scan (press a button)** picks the controller you touch; with only one controller connected, it is selected for you. Button labels: Auto / Xbox / PlayStation / Nintendo / Generic — the PlayStation layout draws a DualSense-style pad (d-pad top left, symmetric sticks, touchpad, PS / Create / Options / Mute), and Auto picks it for Sony controllers. The live view pauses while a test runs, so it never disturbs a measurement.
   - **Separate LT/RT** — Xbox-style pads report both triggers on one shared axis in Windows' generic input path; one click turns on XInput so both triggers show separately.
   - **Assign buttons…** — a generic / D-input pad with extra buttons ("Extra 1" … "Extra 8") can map them to L4, R4, L5, R5, Share, Guide, Touchpad or Mute. A live dot shows which physical button is which; the mapping is saved per controller model and used in every capture and analysis.
 - **Quick Tests** — guided tests of 10 to 60 seconds, each with its own countdown and instructions:
@@ -98,7 +98,7 @@ Short version: it's a small, offline, listen-only tool — and you don't have to
 
 ## Status
 
-1.0.2 is a small update of 1.0.0, the first public release: 1.0.1 added the **♥ Support** button, 1.0.2 makes the toolbar fit small screens and high display scaling and gives the graph on Advanced / Lab more room. The measurement pipeline and every feature above are complete and covered by automated tests, but hardware verification is **one controller** so far (see [Known limitations](#known-limitations)), and every input-quality threshold is provisional until results from many controllers exist.
+1.0.3 is a small update of 1.0.0, the first public release: 1.0.1 added the **♥ Support** button, 1.0.2 makes the toolbar fit small screens and high display scaling and gives the graph on Advanced / Lab more room, 1.0.3 draws a DualSense-style pad for the PlayStation layout and gives the result bands on Advanced / Lab more width. The measurement pipeline and every feature above are complete and covered by automated tests, but hardware verification is **one controller** so far (see [Known limitations](#known-limitations)), and every input-quality threshold is provisional until results from many controllers exist.
 
 ## Feedback
 

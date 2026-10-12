@@ -1,41 +1,32 @@
-# AleksControllerTester v1.0.2 — fits every screen, a taller graph
+# AleksControllerTester v1.0.3 — a real PlayStation layout, wider result tables
 
-**A small update of 1.0.1: the toolbar and the Advanced / Lab page fit small
-screens and high display scaling, and the Advanced / Lab graph gets the room
-the result bands left. Measurements, scores and file formats are unchanged.**
+**A small update of 1.0.2: the PlayStation layout now draws a DualSense-style
+pad, and the result tables on Advanced / Lab get more width. Measurements,
+scores and file formats are unchanged.**
 
 ## What's new
 
-- **The toolbar never overlaps.** On a narrow window, a 1024 px screen or at
-  high display scaling, "Check power saving" could slide under the ♥ Support
-  button. Now the toolbar gives way step by step instead: the device picker
-  narrows, then **♥ Support** shrinks to the heart **♥** alone (same tooltip),
-  then the "Power:" and "Device:" labels and the app name hide. Each step comes
-  back as the window widens.
-- **Advanced / Lab: the result bands moved to the right.** "Input quality",
-  "Latency (host-side lower bounds)" and "XInput cross-check" now fill the
-  empty space under the **QUICK TEST / TEST SETUP** block. On a tall window
-  (for example 2560 × 1440) all three are stacked there; on a shorter one (for
-  example 1920 × 1080) they share that place behind three small tabs —
-  **Input quality / Latency / XInput**; on a small window the right column
-  scrolls, and scrolled down the bands fill it. Values are never cut to "…";
-  a long note ends with "…" and shows in full when you hover over it.
-- **A taller graph.** The graph and its description take the room the bands
-  left. On a large window (for example 2560 × 1440) the graph sits under the
-  top panels without scrolling, about twice as tall as in 1.0.1. On a smaller
-  one (for example 1920 × 1080 or 1280 × 800) the page scrolls as before, to a
-  graph as tall as the page — 884 px at 1920 × 1080 instead of 320 px — so
-  scrolled down, the graph fills the page. It is never squeezed until its
-  labels overlap.
-- **Nothing is cut off any more.** The "Compare" tab, the "Stop Quick Test",
-  "Export Report" and "Open Folder" buttons and the "Cross-check with XInput"
-  text no longer run off a narrow window: the tabs narrow, the buttons wrap
-  into a second row, the check box uses a shorter text (the full one is its
-  tooltip), and on a narrow page the panels rearrange so no value is clipped.
-  The toolbar rows and the new layout follow the display scaling (checked at
-  100–200 %).
+- **The PlayStation layout draws a DualSense-style pad.** Picking
+  **PlayStation** in the Controller page's Layout box used to change only the
+  labels on the Xbox-style drawing. It now draws a pad shaped like a DualSense:
+  the **d-pad top left**, **both sticks low and symmetric**, Triangle / Circle /
+  Cross / Square top right, a large **touchpad** with **Create** and **Options**
+  beside it, the **PS** button between the sticks with **Mute** below it, L1 / R1
+  and L2 / R2 on the shoulders and the four back-paddle positions on the grips.
+  No logo or lettering is drawn on the body. The badges and their lines follow
+  the new positions, and no line crosses another.
+- **Auto picks it for Sony controllers.** With the Layout box on **Auto**, a
+  Sony controller gets the DualSense-style drawing; every other controller keeps
+  the Xbox-style drawing. An explicit pick in the Layout box always wins.
+- **Advanced / Lab: wider result tables.** The **Description** box beside the
+  graph is half as wide, and the freed width goes to the right column, so the
+  **Input quality / Latency / XInput cross-check** tables get wider columns. At
+  2560 × 1440 the right column grows from 640 to 922 px and the **Note** column
+  from 264 to 546 px; the Note column now shows from windows about 1410 px wide
+  (was about 1590). The graph keeps its width and the **Score breakdown** keeps
+  its bars.
 
-## Everything from 1.0.0 and 1.0.1 still applies
+## Everything from 1.0.0 – 1.0.2 still applies
 
 The tested hardware (one controller so far: a GameSir G7 HE over a USB cable,
 on the Xbox-compatible HID path with XInput, one Windows 11 PC), the known
@@ -43,10 +34,9 @@ limitations, the system requirements and the notes on the unsigned build are
 unchanged — see the
 [1.0.0 release notes](https://github.com/moneks1106-code/AleksControllerTester/releases/tag/v1.0.0)
 and the README (**Tested hardware**, **Known limitations**, **Is it safe?**).
-The **♥ Support** button from
-[1.0.1](https://github.com/moneks1106-code/AleksControllerTester/releases/tag/v1.0.1)
-works as before. Saved runs, settings and exported reports from 1.0.0 and
-1.0.1 open as before.
+The PlayStation drawing is a display layout; the PlayStation, Nintendo and
+generic D-input input profiles are still **not yet verified on hardware**.
+Saved runs, settings and exported reports from earlier versions open as before.
 
 ## System requirements
 
@@ -60,7 +50,7 @@ works as before. Saved runs, settings and exported reports from 1.0.0 and
 ## Verify the download
 
 - The zip's **SHA-256** is on this release page (not inside the zip). Check it in
-  PowerShell: `Get-FileHash .\AleksControllerTester-v1.0.2-win-x64.zip -Algorithm SHA256`
+  PowerShell: `Get-FileHash .\AleksControllerTester-v1.0.3-win-x64.zip -Algorithm SHA256`
 - Inside the zip, `SHA256SUMS.txt` lets you check every file — in git-bash or
   WSL: `sha256sum -c SHA256SUMS.txt`
 - `BUILDINFO.txt` names the source commit, the .NET SDK, the bundled .NET
