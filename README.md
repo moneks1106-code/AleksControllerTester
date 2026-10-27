@@ -4,6 +4,8 @@
 
 ### ➡️ [Download InputLab](https://github.com/moneks1106-code/InputLab/releases/latest)
 
+### 💬 [Join the InputLab Discord](https://discord.gg/3kEktvD4zm)
+
 ## Everything from AleksControllerTester, in InputLab
 
 - The controller live view and the quick tests: Stick Motion with the delivery score, Idle Drift, Button Burst, Trigger Sweep and Stick Range.
